@@ -1,0 +1,30 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: steelblue;
+    text-align: center;
+}
+.porHacer {
+    background-color: gold;
+}
+.enCurso {
+    background-color: greenyellow;
+}
+.finalizado {
+    background-color: lightblue;
+}
+div{
+    width: 100%;
+    border-color: black;
+    border-style: solid;
+}
+.columnas{
+    display: flex;
+    align-content: space-between;
+}
+p{
+    background-color: cornsilk;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mensajeESC{
+    font-weight: bold;
+}
