@@ -9,17 +9,19 @@ class Tarea{
 }
 
 const tareas = [];
-const paraMostrar = [];
 let elemento;
+let ul = document.getElementById("porHacerList");
+let item;
 do{
     elemento = prompt("ingrese una tarea");
-    if(elemento!=null){
+    if(elemento!=null && elemento.length>0){
+        item = document.createElement("li");
         tareas.push(new Tarea(elemento));
-        alert("se ha registrado una nueva tarea, tiene "+tareas.length+" tareas por hacer.");
+        item.innerHTML= elemento;
+        ul.append(item);
     }
 }while(elemento!=null);
 
-alert("las tareas Ingresada fueron: "+tareas.length)
-for(let i=0; i<tareas.length; i++){
-    alert((i+1)+" "+tareas[i].nombre+"\n");
-}
+let finalText = document.createElement("p");
+finalText.innerHTML = `Se agregaron ${tareas.length} tareas nuevas`;
+document.body.append(finalText);
