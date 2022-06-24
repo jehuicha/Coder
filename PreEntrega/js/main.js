@@ -12,16 +12,24 @@ const tareas = [];
 let elemento;
 let ul = document.getElementById("porHacerList");
 let item;
-do{
-    elemento = prompt("ingrese una tarea");
+let inputBoton = document.getElementById("botonInput");
+inputBoton.addEventListener("click",agregarTarea);
+let inputTarea = document.getElementById("inputTarea");
+inputTarea.addEventListener("keypress",enterInput);
+function agregarTarea() {
+    cargarTarea();
+}
+function enterInput(e){
+    if(e.key == "Enter")
+        cargarTarea();
+}
+function cargarTarea(){
+    elemento = inputTarea.value;
     if(elemento!=null && elemento.length>0){
         item = document.createElement("li");
         tareas.push(new Tarea(elemento));
         item.innerHTML= elemento;
         ul.append(item);
+        inputTarea.value = "";
     }
-}while(elemento!=null);
-
-let finalText = document.createElement("p");
-finalText.innerHTML = `Se agregaron ${tareas.length} tareas nuevas`;
-document.body.append(finalText);
+}
