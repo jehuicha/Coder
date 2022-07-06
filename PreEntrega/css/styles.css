@@ -1,21 +1,24 @@
 body{
     font-family: 'Courier New', Courier, monospace;
-    background-color: steelblue;
+    background-color: whitesmoke;
     text-align: center;
+    align-content: space-between;
 }
 .porHacer {
-    background-color: gold;
+    background-color: lightcyan;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 .enCurso {
-    background-color: greenyellow;
+    background-color: lightcyan;
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 .finalizado {
-    background-color: lightblue;
+    background-color: lightcyan;
+    box-shadow: -2px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 div{
     width: 100%;
-    border-color: black;
-    border-style: solid;
+    margin: 5px;
 }
 .columnas{
     display: flex;
