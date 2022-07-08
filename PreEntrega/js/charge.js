@@ -6,7 +6,7 @@ let inputTarea = document.getElementById("inputTarea");
 
 inputBoton.addEventListener("click",cargarTarea);
 inputTarea.addEventListener("keypress",enterInput);
-ul.addEventListener("click", eliminarTarea);
+ul.addEventListener("click", withSweetAlert);
 for(let i=localStorage.length-1; i>=0; i--){
     clave = localStorage.key(i);
     tareaCargada = JSON.parse(localStorage.getItem(clave));

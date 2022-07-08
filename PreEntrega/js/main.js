@@ -16,6 +16,7 @@ function enterInput(e){
     if(e.key == "Enter")
         cargarTarea();
 }
+
 function cargarTarea(){
     elemento = inputTarea.value;
     if(elemento!=null && elemento.length>0){
@@ -29,6 +30,20 @@ function cargarTarea(){
         inputTarea.value = "";
     }
 }
+
+function withSweetAlert(e){
+    swal({
+        title: "Desea Borrar la siguiente tarea",
+        text: e.target.innerText,
+        icon: "warning",
+        buttons: true,
+        dangerMode: true
+      })
+      .then((value)=>{
+        value? eliminarTarea(e): null;
+      })
+}
+
 function eliminarTarea(e){
     console.log("Texto clickeado",e.target.innerText);
     console.log("id del texto clickeado",e.target.id,"       tareas.length",tareas.length);
